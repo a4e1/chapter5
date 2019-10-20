@@ -1,2 +1,2 @@
-# text.chapter5
+# chapter5
 課題
