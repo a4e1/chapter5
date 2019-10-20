@@ -1,10 +1,25 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE html><!---->
 <html lang="ja">
 <head>
-    <meta charset="utf-8" />
+	<meta charset="utf-8" />
+	<!--meta要素：head要素の内に配置して、このページに関するさまざまな情報を記述する要素。
+		meta charset:文字エンコーディング-->
+	
 	<meta name="viewport" content="width=device-width">
+	<!--meta要素は以下のように属性を使う。
+		・HTML5で文字コードを指定する場合：「charset属性」
+		・文字コード以外を指定する場合：「name属性」or「http-equiv属性」
+		・「name属性」「http-equiv属性」の内容は「content属性」に指定。
+		・<meta name="情報の種類" content"情報の内容">
+		★<meta http-equiv="●" content"●">
+			・content-type：ファイルの形式（charset属性に未対応のブラウザの為の文字コード指定方法）
+			<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+			・X-UA-Compatible：Internet Explorerどのバージョンの再現方法で表示するかを指定
+			<meta http-equiv="X-UA-Compatible" content="IE=11">
+		・1つのmeta要素には「charset属性」か「name属性」か「http-equiv属性」のどれか一つしか指定できない。-->
 
-    <title>TODAY</title>
+	<title>TODAY</title>
+	<!--title：Webページのタイトル。ブラウザーのタブ等に表示される-->
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/
@@ -15,17 +30,20 @@ HAHRg320mUcww7on3RYdg4Va+PmSTsz/k68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/
 bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD
 0JutlnGaslCJuC7uwjduw9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+	<!--link rel="ファイルとの関係性" href="ページのURL"-->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<header>
 		<h1>TOMORROW</h1>
+		<!--hタグ：見出し要素-->
 	</header>
 
 	<div class="container">
+		★<!--div class：-->
 		<p class="date">20xx/01/23</p>
+		<!--Pタグ：段落要素-->
 	</div>
 </body>
 </html>
