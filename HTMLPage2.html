@@ -1,10 +1,9 @@
-﻿<!DOCTYPE html><!---->
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
-	<meta charset="utf-8" />
-	<!--meta要素：head要素の内に配置して、このページに関するさまざまな情報を記述する要素。
-		meta charset:文字エンコーディング-->
-	
+	<meta charset="utf-8">
+	<!--meta要素：head要素の内に配置して、このページに関するさまざまな情報を記述する要素
+		meta charset:文字エンコーディング -->
 	<meta name="viewport" content="width=device-width">
 	<!--meta要素は以下のように属性を使う。
 		・HTML5で文字コードを指定する場合：「charset属性」
@@ -17,9 +16,8 @@
 			・X-UA-Compatible：Internet Explorerどのバージョンの再現方法で表示するかを指定
 			<meta http-equiv="X-UA-Compatible" content="IE=11">
 		・1つのmeta要素には「charset属性」か「name属性」か「http-equiv属性」のどれか一つしか指定できない。-->
-
-	<title>TODAY</title>
-	<!--title：Webページのタイトル。ブラウザーのタブ等に表示される-->
+		
+    <title>TODAY</title>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/
@@ -30,20 +28,19 @@ HAHRg320mUcww7on3RYdg4Va+PmSTsz/k68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/
 bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD
 0JutlnGaslCJuC7uwjduw9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<!--link rel="ファイルとの関係性" href="ページのURL"-->
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<header>
-		<h1>TOMORROW</h1>
-		<!--hタグ：見出し要素-->
+		<h1>TODAY</h1>
 	</header>
 
 	<div class="container">
-		★<!--div class：-->
 		<p class="date">20xx/01/23</p>
 		<!--Pタグ：段落要素-->
+
 	</div>
 </body>
 </html>
@@ -56,6 +53,31 @@ bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD
 	
 	answer = answer + 10; // 7 + 10
 	document.write('<br>7+10=' + answer);
-	</script>
-	// date-objectを追加する
-	// 練習
+
+var today = new Date();
+var newYear = new Date (2017, 1, 1);
+
+document.write('<p>今日は ' + today.getDate() + '日です<p/>');
+document.write('<p>元旦は ' + newYear.getDate() + '日です<p/>');
+
+var todayHtml = today.getFullYear() + '/' + (today.getMonth()+1) + '/' + today.getDate();
+
+document.write('<p class="date">' + todayHtml + '</p>');
+
+var tomorrow = new Date();
+document.write('<p>明日は ' + (tomorrow.getDate()+1) + '日です<p/>');
+</script>
+<!-- 今日の日付を知るためのメソッド：「get date」メソッド
+	 実際に表示される数字は、実行日になる -->
+<!-- var インスタンス名(変数) = new Date();　　//今現在 -->
+<!-- var インスタンス名 = new Date( 年 , 月 , 日 , 時 , 分 , 秒);　　//任意の日時  数字＝整数 -->
+<!-- var インスタンス名 = new Date(	日付文字列 );	//'December 17 , 1995 03:24:00'　など
+	 var today = new Date('December 17 , 1995 03:24:00');
+	 表示結果：今日は 17日です -->
+
+<!-- ・getFullYear:年を4桁で取得
+	 ・getMonth：月を取得。ただし取得する数字は0から始まってしまうため（0が1月を意味する）、
+	 　目的の数字にするには1を加える必要がある。
+	 ・getDate：日付を取得 -->
+
+<!-- 予約語：-->
